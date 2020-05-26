@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>MyWork</title>
+  <link rel="stylesheet" href="./css/bootstrap.min.css" />
+  <script src="mydatas.js"></script>
+  <link href="profile.css" rel="stylesheet" />
+  <script src="./js/jquery-1.9.1.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+</head>
+
+<body>
+  <!-- first animation block -->
+  <div class="bg-white">
+    <div class="slide-in section" id="con-first">
+      <div>
+        <div class="myicon">
+          <div id="domilk" class="animate__animated animate__bounceInDown"></div>
+        </div>
+        <div class="circle__item">
+          <svg class="circle__spinner" viewBox="0 0 50 50">
+            <circle class="path" cx="25" cy="25" r="20" fill="none" stroke="#34D6BF" stroke-width="1"></circle>
+          </svg>
+        </div>
+      </div>
+      <div>
+        <h1 class="titleanime">
+          <span class="text-wrapper">
+            <span class="mytitle">Meng's Portfolio</span>
+          </span>
+        </h1>
+        <div class="myscrollbtn">
+          <div class="first-button-part">
+            <button type="button" id="scroll-next" class="animate__animated animate__fadeInUp"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- second profile block -->
+  <div class="bg-green">
+    <div class="bg-white-after"></div>
+    <div class="container slide-in section" id="con-profile">
+      <h1 class="title">Profile</h1>
+      <div class="myprofile row">
+        <div class="profile-basic col-md-12 col-lg-8">
+          <div id="profile-dialog">
+            <div class="profile-dialog-text">
+              <p><span class="my-name"><b>孟欣, Meng</b></span><br>Taiwan, 台中市</p>
+              <p>網頁前端工程師 | 美術設計師</p>
+            </div>
+          </div>
+          <div class="profile-photo slide-in">
+            <img src="./img/webuse/myphoto.jpg" class="img-fluid myphoto" />
+          </div>
+          <h4 class="sub-title slide-in">專業技能</h4>
+          <div class="profile-ability">
+            <div class="ability-text slide-in">
+              <h6>網頁前端工程</h6>
+              <hr class="profile-hr">
+              <p>
+                擅長美化設計版面<br />
+                製作RWD響應式設計網頁<br />
+                - CSS / SASS / BS4<br />
+                - JavaScript / JQuery<br />
+                - React.js<br />
+                - git<br />
+              </p>
+            </div>
+            <div class="ability-text slide-in">
+              <h6>繪圖設計</h6>
+              <hr class="profile-hr">
+              <p>
+                長期接案，與神魔之塔、<br />
+                萌番文化等公司合作過。<br />
+                工具熟練、規格概念明確<br />
+                - Adobe Photoshop<br />
+                - Adobe Illustrator<br />
+                - Clip Studio Paint<br />
+              </p>
+            </div>
+            <div class="ability-text slide-in rwd-dissapear">
+              <h6>日語能力</h6>
+              <hr class="profile-hr">
+              <p>
+                曾赴日語文學校留學一年<br />
+                進階會話及敬語皆無障礙<br />
+                - N1合格<br />
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12 col-lg-4 profile-exp">
+          <h4 class="sub-title slide-in">經歷</h4>
+          <div class="slide-in" id="profile-exp"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- third profile block -->
+  <div class="bg-white">
+    <div class="bg-green-after"></div>
+    <div class="container slide-in" id="con-program">
+      3<br />3<br />3<br />3<br />3<br />3<br />3<br />3<br />3<br />3<br />3<br />3<br />3<br />3<br />
+    </div>
+  </div>
+
+
+
+
+  <div class="bg-green">
+    <div class="bg-white-after"></div>
+    <div class="container slide-in" id="con-picture">
+      <div class="pic-part-btns slide-in">
+        <span class="pic-buttons">
+          <button type="button" class="btn btn-success btn-all" name="all">
+            All
+          </button>
+          <button type="button" class="btn btn-warning btn-illust" name="illust">
+            illust
+          </button>
+          <button type="button" class="btn btn-danger btn-cute" name="cute">
+            cute
+          </button>
+          <button type="button" class="btn btn-info btn-charactor" name="charactor">
+            charactor
+          </button>
+          <button type="button" class="btn btn-primary btn-background" name="background">
+            background
+          </button>
+        </span>
+        <span>
+          <button type="button" class="btn btn-secondary newtoold" onclick="clickNewBtn()">
+            由新至舊排序
+          </button>
+          <button type="button" class="btn btn-dark oldtonew" onclick="clickOldBtn()">
+            由舊至新排序
+          </button>
+        </span>
+      </div>
+      <hr />
+      <div class="grid picInner slide-in" id="pic-inner"></div>
+    </div>
+  </div>
+  <div class="bg-green-after"></div>
+
+  <div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="modal-pic"></div>
+      </div>
+    </div>
+  </div>
+  <script src="profile.js"></script>
+  <script src="./js/jquery.min.js"></script>
+  <script src="./js/popper.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+  <script src="profile-slide.js"></script>
+</body>
+
+</html>
